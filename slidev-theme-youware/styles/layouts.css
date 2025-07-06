@@ -1,0 +1,163 @@
+/* YouWare Theme Layout Styles */
+
+/* Cover Layout */
+.slidev-layout.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+
+.slidev-layout.cover h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.slidev-layout.cover p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Default Layout */
+.slidev-layout.default {
+  padding: 4rem;
+}
+
+/* Two Columns Layout */
+.slidev-layout.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem;
+  align-items: start;
+}
+
+.slidev-layout.two-cols.left-heavy {
+  grid-template-columns: 2fr 1fr;
+}
+
+.slidev-layout.two-cols.right-heavy {
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Center Layout */
+.slidev-layout.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  min-height: 100vh;
+}
+
+/* Image Layout */
+.slidev-layout.image-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem;
+  align-items: center;
+}
+
+.slidev-layout.image-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem;
+  align-items: center;
+}
+
+.slidev-layout.image-right .content {
+  order: -1;
+}
+
+/* Section Layout */
+.slidev-layout.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  background-color: var(--yw-accent-green);
+  color: white;
+}
+
+.slidev-layout.section h1,
+.slidev-layout.section h2,
+.slidev-layout.section p {
+  color: white;
+}
+
+/* Quote Layout */
+.slidev-layout.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  text-align: center;
+}
+
+.slidev-layout.quote blockquote {
+  font-size: 2rem;
+  line-height: 1.5;
+  max-width: 900px;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.slidev-layout.quote cite {
+  display: block;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  color: var(--yw-text-secondary);
+  font-style: normal;
+}
+
+/* Utility Classes */
+.yw-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: var(--yw-accent-green);
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: var(--yw-shadow-sm);
+}
+
+.yw-button:hover {
+  background-color: var(--yw-accent-green-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--yw-shadow-md);
+  text-decoration: none;
+}
+
+.yw-tag {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  background-color: var(--yw-tag-bg);
+  color: var(--yw-text-primary);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0.25rem;
+}
+
+.yw-card {
+  background-color: var(--yw-bg-white);
+  border: 1px solid var(--yw-border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--yw-shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.yw-card:hover {
+  box-shadow: var(--yw-shadow-md);
+}
