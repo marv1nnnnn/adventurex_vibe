@@ -1,17 +1,19 @@
 /* Default styling for all slides */
 :root {
-  /* Colors */
-  --slidev-theme-primary-bg: #0F0F0F;
-  --slidev-theme-text-body: rgba(255, 255, 255, 0.8);
-  --slidev-theme-text-heading: #FFFFFF;
-  --slidev-theme-border-color: #252525;
-  --slidev-theme-card-bg: #171717;
+  /* Colors - YouWare branding */
+  --slidev-theme-primary-bg: #F5F0E8;
+  --slidev-theme-text-body: #333333;
+  --slidev-theme-text-heading: #1A1A1A;
+  --slidev-theme-border-color: #E0E0E0;
+  --slidev-theme-card-bg: #FFFFFF;
+  --slidev-theme-accent-green: #5A6650;
   --slidev-theme-accent-grey: #6E6E6E;
 
-  /* Typography */
-  --slidev-font-primary: "Inter", sans-serif;
-  --slidev-font-secondary: "Inter", sans-serif;
-  --slidev-font-mono: "monospace"; /* You might want to choose a specific mono font later */
+  /* Typography - YouWare branding */
+  --slidev-font-primary: "Courier Prime", monospace;
+  --slidev-font-secondary: "Courier Prime", monospace;
+  --slidev-font-chinese: "PingFang SC", "Microsoft YaHei", sans-serif;
+  --slidev-font-mono: "Courier Prime", monospace;
 }
 
 /* Apply primary background to the presentation */
@@ -23,24 +25,25 @@
 
 /* Heading styles */
 h1, h2 {
-  font-family: var(--slidev-font-primary);
-  font-weight: 700; /* Bold - Changed from 900 */
-  letter-spacing: -0.02em; /* -2% tracking */
+  font-family: var(--slidev-font-primary), var(--slidev-font-chinese);
+  font-weight: 600; /* Medium weight for cleaner look */
+  letter-spacing: 0; /* No tracking for monospace */
   color: var(--slidev-theme-text-heading);
 }
 
 h3, h4 {
-  font-family: var(--slidev-font-secondary);
-  font-weight: 600; /* SemiBold */
+  font-family: var(--slidev-font-secondary), var(--slidev-font-chinese);
+  font-weight: 500; /* Medium */
   letter-spacing: 0;
   color: var(--slidev-theme-text-heading);
 }
 
 /* Body text styles */
 p, li, td, th {
-  font-family: var(--slidev-font-secondary);
+  font-family: var(--slidev-font-secondary), var(--slidev-font-chinese);
   font-weight: 400; /* Regular */
   letter-spacing: 0;
+  line-height: 1.6;
 }
 
 /* Microcopy styles */
@@ -53,21 +56,23 @@ p, li, td, th {
 
 /* Links */
 a {
-  color: var(--slidev-theme-text-heading);
+  color: var(--slidev-theme-accent-green);
   text-decoration: none;
-  border-bottom: 1px solid var(--slidev-theme-accent-grey);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 a:hover {
-  opacity: 0.8;
+  border-bottom-color: var(--slidev-theme-accent-green);
 }
 
 /* Code blocks - basic styling, can be enhanced further */
 pre, code {
   font-family: var(--slidev-font-mono);
-  background-color: var(--slidev-theme-card-bg);
+  background-color: #FAFAF8;
   border: 1px solid var(--slidev-theme-border-color);
   border-radius: 4px;
+  color: var(--slidev-theme-text-body);
 }
 
 /* Tables - basic styling */
@@ -83,8 +88,9 @@ th, td {
 }
 
 th {
-  background-color: var(--slidev-theme-card-bg);
+  background-color: #FAFAF8;
   color: var(--slidev-theme-text-heading);
+  font-weight: 500;
 }
 
 /* Dividers */
@@ -99,11 +105,13 @@ hr {
   @apply h-full grid;
 
   h1 {
-    @apply text-6xl leading-20;
+    @apply text-5xl leading-tight;
+    margin-bottom: 1.5rem;
   }
 
   h1 + p {
-    @apply -mt-2 opacity-50 mb-4;
+    @apply opacity-70 mb-6;
+    font-size: 1.125rem;
   }
 
   p + h2,
@@ -111,4 +119,56 @@ hr {
   table + h2 {
     @apply mt-10;
   }
+}
+
+/* Vintage tech aesthetic additions */
+.slidev-layout {
+  position: relative;
+}
+
+/* Subtle grain texture overlay */
+.slidev-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.03;
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,.01) 35px, rgba(0,0,0,.01) 70px);
+  pointer-events: none;
+}
+
+/* Custom selection colors */
+::selection {
+  background-color: var(--slidev-theme-accent-green);
+  color: white;
+}
+
+/* Focus states with green accent */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--slidev-theme-accent-green);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+textarea,
+select {
+  transition: all 0.2s ease;
+}
+
+/* Vintage-style blockquotes */
+blockquote {
+  border-left: 4px solid var(--slidev-theme-accent-green);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--slidev-theme-accent-grey);
 }

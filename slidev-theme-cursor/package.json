@@ -23,12 +23,12 @@
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
-    "colorSchema": "both",
+    "colorSchema": "light",
     "defaults": {
       "fonts": {
-        "sans": "Inter",
-        "mono": "Fira Code",
-        "weights": "400,500,600,700,900"
+        "sans": "Courier Prime",
+        "mono": "Courier Prime",
+        "weights": "400,500,600,700"
       }
     }
   }
