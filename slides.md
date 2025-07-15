@@ -273,8 +273,14 @@ layout: default
 AI 很擅长，但觉得没有意思
 
 灵感：Terry A. Davis TempleOS
-<img src='./assets/terry_davis.jpg' class="w-auto h-60 object-cover rounded-lg shadow-lg">
-<img src='./assets/TempleOS_4.05_session.png' class="w-auto h-60 object-cover rounded-lg shadow-lg">
+<div class="grid grid-cols-4 gap-8">
+  <div class="col-span-2">
+    <img src='./assets/terry_davis.jpg' class="w-auto h-80 object-cover rounded-lg shadow-lg">
+  </div>
+  <div class="col-span-2">
+    <img src='./assets/TempleOS_4.05_session.png' class="w-auto h-80 object-cover rounded-lg shadow-lg">
+  </div>
+</div>
 
 过去需要花一辈子的事情，现在只需要几分钟
 
@@ -284,23 +290,13 @@ layout: default
 ---
 
 # Adding more elements
+用 3D 大脑来组织项目？
 
-
-Psychonauts
-
----
-layout: default
----
-
-# I could create what I want
-
-最重要的是这个理念的转变
-
-Disco Elysium
-
-Ape of Naples
-
-Near Death Experience
+<div>
+  <div class="col-span-2 flex justify-center items-center">
+    <Youtube id="Uss7_PGaFLQ" width="600" height="400" />
+  </div>
+</div>
 
 ---
 layout: default
@@ -308,31 +304,122 @@ layout: default
 
 # I could create what I want
 
-最重要的是这个理念的转变
+<div class="grid grid-cols-2 gap-12">
+  <div class="flex flex-col justify-start">
+    <p class="text-lg mb-6">
+      最重要的是这个理念的转变：意识到你可以做你想实现的一切
+    </p>
+    <p class="text-lg mb-4">加入那些你真正喜欢的元素：</p>
+    <div class="space-y-4">
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-[#1A1A1A] text-xl">凌晨的海面，极光</h3>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-[#1A1A1A] text-xl">极乐迪斯科的对话框</h3>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-[#1A1A1A] text-xl">The Ape of Naples的封面</h3>
+      </div>
+    </div>
+  </div>
 
-Near Death Experience
-
-Disco Elysium
-
-Ape of Naples
+  <div class="grid grid-cols-2 gap-4">
+    <img 
+      src='./assets/disco_elysium.jpg' 
+      class="w-60 h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      alt="Disco Elysium dialogue interface"
+    >
+    <div class="flex flex-col gap-4">
+      <img 
+        src='./assets/apeofnaples.webp'
+        class="w-full h-auto object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        alt="The Ape of Naples album cover"
+      >
+      <img 
+        src='./assets/ape3d.png'
+        class="w-full h-auto object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        alt="3D visualization"
+      >
+    </div>
+  </div>
+</div>
 
 ---
 layout: default
 ---
 
-# My Toolkit
+# Toolkit
 
-AI 头脑风暴模式
+<div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-6">
+    <YouWareCard hoverable>
+      <h3 class="text-xl mb-4">我使用的工具</h3>
+      <div class="flex items-center gap-2">
+        <div class="i-carbon:code text-2xl text-[#5A6650]"></div>
+        <span>Cursor + Roo code + Claude code</span>
+      </div>
+    </YouWareCard>
+  </div>
+
+  <div class="flex flex-col gap-6">
+    <YouWareCard hoverable>
+      <h3 class="text-xl mb-4">被忽视的环节</h3>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-2">
+          <div class="i-carbon:idea text-xl text-[#5A6650]"></div>
+          <span>通过 Roo Code 进行 AI 头脑风暴</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <div class="i-carbon:checkbox text-xl text-[#5A6650]"></div>
+          <span>做选择题而不是写作文</span>
+        </li>
+      </ul>
+    </YouWareCard>
+  </div>
+</div>
 
 ---
 layout: default
 ---
 
-# My Suggestions
+# Thoughts
 
-1. 强迫自己不去改代码，锻炼自己的 prompt 能力
-2. 使用 code-based 方案，而不是 UI-based 方案 (e.g. SuperCollider vs Ableton)
-3. 多看别人的项目，从中获得启发
+<div class="grid grid-cols-1 gap-4 mt-6">
+  <YouWareCard hoverable class="p-4">
+    <div class="flex items-center gap-2">
+      <div class="i-carbon:idea text-xl text-[#5A6650]"></div>
+      <span>强迫自己不去改代码，锻炼自己的 prompt 能力</span>
+    </div>
+  </YouWareCard>
+
+  <YouWareCard hoverable class="p-4">
+    <div class="flex items-center gap-2">
+      <div class="i-carbon:face-satisfied text-xl text-[#5A6650]"></div>
+      <span>你可以不喜欢它，但你要了解它</span>
+    </div>
+  </YouWareCard>
+
+  <YouWareCard hoverable class="p-4">
+    <div class="flex items-center gap-2">
+      <div class="i-carbon:shuffle text-xl text-[#5A6650]"></div>
+      <span>拥抱不确定性，随机是创意的源泉</span>
+    </div>
+  </YouWareCard>
+
+  <YouWareCard hoverable class="p-4">
+    <div class="flex items-center gap-2">
+      <div class="i-carbon:code text-xl text-[#5A6650]"></div>
+      <span>使用 code-based 方案，而不是 UI-based 方案 (e.g. SuperCollider vs Ableton)</span>
+    </div>
+  </YouWareCard>
+
+  <YouWareCard hoverable class="p-4">
+    <div class="flex items-center gap-2">
+      <div class="i-carbon:group text-xl text-[#5A6650]"></div>
+      <span>多看别人的项目，从中获得启发</span>
+    </div>
+  </YouWareCard>
+</div>
 
 ---
 layout: default
@@ -340,9 +427,11 @@ layout: default
 
 # Youware: Vibe coder's community
 
+大部分人都是先看见再相信
 
 ---
-layout: cover
+layout: center
+class: text-center
 ---
 
 # Thank You
