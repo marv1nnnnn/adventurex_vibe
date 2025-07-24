@@ -421,6 +421,7 @@ layout: default
 ---
 
 # Support us
-<div class="flex items-center justify-center">
-  <img src="./assets/producthunt.jpg" class="w-auto h-170 object-contain">
+<div class="flex items-center justify-center gap-8">
+  <img src="./assets/producthunt.jpg" class="w-auto h-140 object-contain">
+  <img src="./assets/creator.png" class="w-auto h-140 object-contain">
 </div>
