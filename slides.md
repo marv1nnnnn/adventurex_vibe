@@ -71,12 +71,12 @@ layout: default
 
 <div class="grid grid-cols-3 gap-8 mt-8">
   <div class="flex justify-center">
-    <img src="./assets/arch_1.png" class="w-auto h-180 object-cover rounded-lg shadow-lg">
+    <img src="./assets/arch_1.png" class="w-auto h-180 object-cover rounded-lg shadow-lg" v-click="1">
   </div>
   
   <div class="flex flex-col gap-4 col-span-2">
-    <img src="./assets/arch_2.png" class="w-460 h-120 object-cover rounded-lg shadow-lg">
-    <img src="./assets/arch_3.png" class="w-460 h-50 object-cover rounded-lg shadow-lg" v-click>
+    <img src="./assets/arch_2.png" class="w-460 h-120 object-cover rounded-lg shadow-lg" v-click="1">
+    <img src="./assets/arch_3.png" class="w-460 h-50 object-cover rounded-lg shadow-lg" v-click="2">
   </div>
 </div>
 
@@ -88,7 +88,7 @@ layout: two-cols
 
 <div class="flex flex-col items-center justify-center h-full">
   <img src='./assets/vibe_hangzhou_sharing.jpg' class="w-full h-130 object-cover rounded-lg mb-4" v-click="1">
-  <div class="text-center text-gray-600" v-click="2">
+  <div class="text-center text-gray-600" v-click="1">
     <p class="font-medium mb-2">Cursor Meetup Hangzhou</p>
     <p>2025 年 7 月 12 日</p>
     <p class="italic">硅星人主编 王兆洋</p>
@@ -98,7 +98,7 @@ layout: two-cols
 ::right::
 
 <div class="flex flex-col items-center justify-center h-full">
-  <img src='./assets/wordcloud_final.png' class="w-full h-140 object-cover" v-click="3">
+  <img src='./assets/wordcloud_final.png' class="w-full h-140 object-cover" v-click="2">
   
   <div class="text-center" v-click="4">
     <h2 class="text-3xl font-bold text-[#5A6650]">
@@ -130,24 +130,24 @@ layout: default
 <div class="flex">
   <!-- Left column - 1/3 width -->
   <div class="w-2/5 pr-8" v-click="1">
-    <img src="./assets/paul graham.jpg" class="w-full h-180 object-cover rounded-lg shadow-lg">
+    <img src="./assets/paul graham.jpg" class="w-full h-160 object-cover rounded-lg shadow-lg">
   </div>
 
   <!-- Right column - 2/3 width -->
   <div class="w-3/5 flex flex-col gap-6">
     <div class="p-6">
       <h3 class="text-5xl font-medium mb-4" v-click="2">创作者的共同点</h3>
-      <ul class="space-y-4 text-3xl text-[#333333]" v-click="3">
-        <li>黑客与画家都是创作者。对于想写出漂亮程序的黑客来说，计算机只是一种工具，就像画家的画笔 —— Paul Graham</li>
-        <li>Vibe Coding 让我们每个人都成为了神笔马良。</li>
+      <ul class="space-y-4 text-3xl text-[#333333]">
+        <li v-click="3">黑客与画家都是创作者。对于想写出漂亮程序的黑客来说，计算机只是一种工具，就像画家的画笔 —— Paul Graham</li>
+        <li v-click="4">Vibe Coding 让我们每个人都成为了神笔马良。</li>
       </ul>
     </div>
     <div class="p-6">
-      <h3 class="text-xl font-medium mb-4" v-click="4">真正的挑战</h3>
-      <ul class="space-y-2 text-3xl text-[#333333]" v-click="5">
-        <li> 如何管理色彩 <span class="text-[#5A6650]">(如何管理上下文)</span></li>
-        <li> 补救还是重画 <span class="text-[#5A6650]">(硬聊还是重开)</span></li>
-        <li> 内心的 Image <span class="text-[#5A6650]">(Vibe)</span></li>
+      <h3 class="text-xl font-medium mb-4" v-click="5">真正的挑战</h3>
+      <ul class="space-y-2 text-3xl text-[#333333]">
+        <li v-click="6"> 如何管理色彩 <span class="text-[#5A6650]">(如何管理上下文)</span></li>
+        <li v-click="7"> 补救还是重画 <span class="text-[#5A6650]">(硬聊还是重开)</span></li>
+        <li v-click="8"> 内心的 Image <span class="text-[#5A6650]">(Vibe)</span></li>
       </ul>
     </div>
   </div>
@@ -161,7 +161,7 @@ layout: two-cols
 
 <div class="mt-24">
   <ul class="space-y-6 text-lg">
-    <li v-click="1" class="text-4xl">不知道自己想要什么，这很正常</li>
+    <li v-click="1" class="text-4xl">不知道自己想要做什么，这很正常</li>
     <li v-click="2" class="text-4xl">Good Artist Copy, Great Artist Steal</li>
     <li v-click="3" class="text-4xl">这句话其实是毕加索说的</li>
   </ul>
@@ -248,7 +248,7 @@ layout: default
   </div>
 
   <p class="mt-4 text-lg font-light text-center italic" v-click="5">
-    过去需要花一辈子的事情，现在只需要几分钟
+    创造并不存在的事物？
   </p>
 </div>
 
@@ -258,7 +258,7 @@ layout: default
 ---
 
 # Adding more elements
-用 3D 大脑来组织项目？
+用 3D 大脑来组织项目？https://02a999f8.chaotic-web-os.pages.dev/
 
 <div>
   <div class="col-span-2 flex justify-center items-center">
@@ -279,22 +279,25 @@ layout: default
       <p class="mt-8">限制你的只有想象力</p>
     </div>
     <div>
-      <p class="text-2xl mb-6" v-click="2">加入那些真正喜欢的元素：</p>
+      <p class="text-2xl mb-6" v-click="2">加入那些真正喜欢的元素：https://marv1nnnnn.github.io/</p>
       <div class="grid gap-4">
         <div class="p-4 bg-gray-50/10 rounded-lg hover:bg-gray-50/20 transition-colors duration-300" v-click="3">
-          <h3 class="text-xl font-light">凌晨的海面，极光</h3>
+          <h3 class="text-xl font-light">凌晨的海面</h3>
         </div>
         <div class="p-4 bg-gray-50/10 rounded-lg hover:bg-gray-50/20 transition-colors duration-300" v-click="4">
-          <h3 class="text-xl font-light">极乐迪斯科的对话框</h3>
+          <h3 class="text-xl font-light">极光</h3>
         </div>
         <div class="p-4 bg-gray-50/10 rounded-lg hover:bg-gray-50/20 transition-colors duration-300" v-click="5">
+          <h3 class="text-xl font-light">极乐迪斯科的对话框</h3>
+        </div>
+        <div class="p-4 bg-gray-50/10 rounded-lg hover:bg-gray-50/20 transition-colors duration-300" v-click="6">
           <h3 class="text-xl font-light">The Ape of Naples的封面</h3>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="grid grid-cols-2 gap-6 h-[500px] col-span-2" v-click="4">
+  <div class="grid grid-cols-2 gap-6 h-[450px] col-span-2" v-click="5">
     <img 
       src='./assets/disco_elysium.jpg' 
       class="w-300 h-full object-cover rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
@@ -346,7 +349,7 @@ layout: default
       </li>
       <li class="flex items-center gap-6">
         <div class="i-carbon:checkbox text-4xl text-[#5A6650]" />
-        <span class="text-4xl">做选择题而不是写作文</span>
+        <span class="text-4xl">做选择题而不是填空题</span>
       </li>
     </ul>
   </div>
@@ -356,7 +359,7 @@ layout: default
 layout: default
 ---
 
-# Thoughts
+# Personal Thoughts
 
 <div class="flex flex-col justify-center h-full gap-12 mt-16">
   <div class="p-8" v-click="1">
@@ -420,8 +423,24 @@ layout: default
 layout: default
 ---
 
+# Youware: Start today
+
+<div class="flex flex-col items-center justify-center h-full gap-8">
+  <div class="text-center">
+    <p class="text-3xl font-medium text-[#333333]">Cursor / VSCode 插件应用市场搜索 Youware，一键部署+分享</p>
+  </div>
+  <video src="./assets/Plugin.mp4" class="w-auto h-140 object-contain" autoplay loop muted></video>
+</div>
+
+
+---
+layout: default
+---
+
 # Support us
-<div class="flex items-center justify-center gap-8">
-  <img src="./assets/producthunt.jpg" class="w-auto h-140 object-contain">
-  <img src="./assets/creator.png" class="w-auto h-140 object-contain">
+<div class="flex flex-col items-center justify-center gap-12">
+  <div class="flex items-center justify-center gap-8">
+    <img src="./assets/producthunt.jpg" class="w-auto h-140 object-contain">
+    <img src="./assets/creator.png" class="w-auto h-140 object-contain">
+  </div>
 </div>
